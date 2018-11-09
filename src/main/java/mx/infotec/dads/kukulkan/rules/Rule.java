@@ -24,9 +24,15 @@
 
 package mx.infotec.dads.kukulkan.rules;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Rule {
+public class Rule implements Serializable {
+
+    /**
+     * 
+     */
+    private static final long serialVersionUID = -5325638253562464707L;
 
     private String name;
 

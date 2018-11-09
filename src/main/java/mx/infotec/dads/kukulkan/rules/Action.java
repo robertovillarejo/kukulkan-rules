@@ -24,7 +24,14 @@
 
 package mx.infotec.dads.kukulkan.rules;
 
-public class Action {
+import java.io.Serializable;
+
+public class Action implements Serializable {
+
+    /**
+     * 
+     */
+    private static final long serialVersionUID = -3030222525832092336L;
 
     private String action;
 

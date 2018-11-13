@@ -33,7 +33,7 @@ public class Action implements Serializable {
      */
     private static final long serialVersionUID = -3030222525832092336L;
 
-    private String action;
+    private String actionExpression;
 
     private int order;
 
@@ -42,16 +42,16 @@ public class Action implements Serializable {
     private String valueExpression;
 
     public Action(String action, int order) {
-        this.action = action;
+        this.actionExpression = action;
         this.order = order;
     }
 
     public String getAction() {
-        return action;
+        return actionExpression;
     }
 
     public void setAction(String action) {
-        this.action = action;
+        this.actionExpression = action;
     }
 
     public int getOrder() {
@@ -65,7 +65,7 @@ public class Action implements Serializable {
     // El lado izquierdo de una asignación
     public String getPropertyExpression() {
         if (propertyExpression == null) {
-            propertyExpression = action.split("=")[0].trim();
+            propertyExpression = actionExpression.split("=")[0].trim();
         }
         return propertyExpression;
     }
@@ -73,7 +73,7 @@ public class Action implements Serializable {
     // El lado derecho de una asignación
     public String getValueExpression() {
         if (valueExpression == null) {
-            valueExpression = action.split("=")[1].trim();
+            valueExpression = actionExpression.split("=")[1].trim();
         }
         return valueExpression;
 
